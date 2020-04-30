@@ -10625,6 +10625,13 @@ Object(_modules_social_js__WEBPACK_IMPORTED_MODULE_7__["default"])();
 const fullPageScroll = new _modules_full_page_scroll__WEBPACK_IMPORTED_MODULE_8__["default"]();
 fullPageScroll.init();
 
+window.onload = () => {
+  // TODO remove setTimeout
+  setTimeout(() => {
+    document.body.classList.add(`page--loaded`);
+  }, 1000);
+};
+
 
 /***/ }),
 
