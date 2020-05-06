@@ -10118,7 +10118,7 @@ module.exports = code;
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return prepareText; });
 function prepareText(elementSelector, timer = 400, delay = 0) {
-  let timeOffset = delay + 100;
+  let timeOffset = delay + 50;
   const element = document.querySelector(elementSelector);
   if (!element) {
     return;
@@ -10128,9 +10128,9 @@ function prepareText(elementSelector, timer = 400, delay = 0) {
   const content = text.reduce((fragmentParent, word) => {
     const wordElement = Array.from(word).reduce((fragment, letter, index) => {
       if (index % 2 === 0) {
-        timeOffset += 200;
+        timeOffset += 100;
       } else {
-        timeOffset -= 100;
+        timeOffset -= 50;
       }
       fragment.appendChild(createElement(letter, timeOffset, timer));
       return fragment;
@@ -10680,18 +10680,18 @@ fullPageScroll.init();
 const animationTexts = [
   {
     selector: `.intro__title`,
-    timer: 800
+    delay: 600
   },
   {
     selector: `.intro__date`,
-    timer: 500,
-    delay: 1800
+    delay: 1600
   },
   {
     selector: `.slider__item-title`
   },
   {
-    selector: `.prizes__title`
+    selector: `.prizes__title`,
+    delay: 600
   },
   {
     selector: `.rules__title`
